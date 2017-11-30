@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0ED6BDE9-5407-40FD-BE18-38D5E63FD61D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaterSim_Base</RootNamespace>
+    <AssemblyName>WaterSim_Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;#define ExtendedParameter</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_BASE_Document_V_7_2.cs">
+      <Link>WaterSimDCDC_API_BASE_Document_V_7_2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_Base_Parameters_v_9_3.cs">
+      <Link>WaterSimDCDC_API_Base_Parameters_v_9_3.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_BAsE_Process_v_4.cs">
+      <Link>WaterSimDCDC_API_BAsE_Process_v_4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_BASE_ShadowPM_v_6.cs">
+      <Link>WaterSimDCDC_API_BASE_ShadowPM_v_6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_BASE_Strings v_9_6.cs">
+      <Link>WaterSimDCDC_API_BASE_Strings v_9_6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_BASE_Utilities v 9_6.cs">
+      <Link>WaterSimDCDC_API_BASE_Utilities v 9_6.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_Base_Ver_3.cs">
+      <Link>WaterSimDCDC_API_Base_Ver_3.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\API_SOURCE_FILES\WaterSimDCDC_API_SIO_v_9_3.cs">
+      <Link>WaterSimDCDC_API_SIO_v_9_3.cs</Link>
+    </Compile>
+    <Compile Include="FluxParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaterSimAmerica_2_0_2.cs" />
+    <Compile Include="WaterSimDCDC_API_America_CRF v4.cs" />
+    <Compile Include="WaterSiMDCDC_API_America_Indicators_v2.2.cs" />
+    <Compile Include="WaterSimDCDC_API_America_RateData_V_1.cs" />
+    <Compile Include="WaterSimDCDC_API_America_StateData v 3_2.cs" />
+    <Compile Include="WaterSimDCDC_API_WaterSmith_Manager_v_2_0_2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sankey\Sankey2.csproj">
+      <Project>{2f149e04-d5fe-47c2-9d12-fb9835b1ebdd}</Project>
+      <Name>Sankey2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UniDb2\Projects\UniDb2\UniDb2.csproj">
+      <Project>{045be1b8-6625-4cf1-b5b2-7d60e4d4165d}</Project>
+      <Name>UniDb2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
